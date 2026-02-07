@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Algoritmos de Asignación de Memoria</title>
+    <style></style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🖥️ Simulador de Asignación de Memoria</h1>
+            <p class="subtitle">Comparación de algoritmos Best Fit y Worst Fit</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Panel de Configuración -->
+            <div class="config-panel">
+                <div class="config-section">
+                    <h3>⚙️ Configuración de Memoria</h3>
+                    <div class="input-group">
+                        <input type="number" id="memorySize" placeholder="Tamaño del bloque (KB)" min="1" value="100">
+                        <button class="btn-success" onclick="addMemoryBlock()">Agregar Bloque</button>
+                    </div>
+                    <button class="btn-secondary" onclick="resetMemory()">Reiniciar Memoria</button>
+                </div>
+
+                <div class="config-section">
+                    <h3>📦 Configuración de Procesos</h3>
+                    <div class="input-group">
+                        <input type="number" id="processSize" placeholder="Tamaño del proceso (KB)" min="1" value="50">
+                        <button class="btn-primary" onclick="addProcess()">Agregar Proceso</button>
+                    </div>
+                </div>
+
+                <div class="config-section">
+                    <h3>🎯 Algoritmo de Asignación</h3>
+                    <select id="algorithm" style="width: 100%; padding: 12px; border-radius: 8px; border: 2px solid #e0e0e0; font-size: 1em; margin-bottom: 15px;">
+                        <option value="bestfit">Best Fit (Mejor Ajuste)</option>
+                        <option value="worstfit">Worst Fit (Peor Ajuste)</option>
+                    </select>
+                    <button class="btn-primary" style="width: 100%;" onclick="allocateProcess()">Asignar Proceso</button>
+                    <button class="btn-danger" style="width: 100%; margin-top: 10px;" onclick="deallocateAll()">Liberar Todo</button>
+                </div>
+
+                <div id="messageArea"></div>
+            </div>
+
+            <!-- Visualización de Memoria Best Fit -->
+            <div class="memory-display">
+                <h3>Best Fit - Estado de Memoria</h3>
+                <div id="memoryBlocksBestFit" class="memory-blocks"></div>
+                <div class="process-list">
+                    <h4>Procesos:</h4>
+                    <div id="processesBestFit"></div>
+                </div>
+            </div>
+
+            <!-- Visualización de Memoria Worst Fit -->
+            <div class="memory-display">
+                <h3>Worst Fit - Estado de Memoria</h3>
+                <div id="memoryBlocksWorstFit" class="memory-blocks"></div>
+                <div class="process-list">
+                    <h4>Procesos:</h4>
+                    <div id="processesWorstFit"></div>
+                </div>
+            </div>
+
+            <!-- Panel de Estadísticas -->
+            <div class="stats-panel">
+                <h3>📊 Estadísticas y Análisis de Fragmentación</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-label">Fragmentación Best Fit</div>
+                        <div class="stat-value" id="fragBestFit">0%</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Fragmentación Worst Fit</div>
+                        <div class="stat-value" id="fragWorstFit">0%</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Procesos Asignados (BF)</div>
+                        <div class="stat-value" id="allocatedBF">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Procesos Asignados (WF)</div>
+                        <div class="stat-value" id="allocatedWF">0</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel de Comparación -->
+            <div class="comparison-panel">
+                <h3>🔍 Comparación de Algoritmos</h3>
+                <div class="comparison-grid">
+                    <div class="algorithm-result">
+                        <h4>Best Fit</h4>
+                        <div class="stat-label">Memoria Utilizada</div>
+                        <div class="visual-bar">
+                            <div class="visual-fill" id="usedBF" style="width: 0%">0%</div>
+                        </div>
+                        <div class="stat-label">Memoria Libre</div>
+                        <div class="visual-bar">
+                            <div class="visual-fill" id="freeBF" style="width: 100%; background: #28a745;">100%</div>
+                        </div>
+                        <p style="margin-top: 15px; font-size: 0.95em; color: #6c757d;">
+                            <strong>Ventaja:</strong> Minimiza el espacio desperdiciado al elegir el bloque más pequeño que quepa.
+                        </p>
+                    </div>
+                    <div class="algorithm-result">
+                        <h4>Worst Fit</h4>
+                        <div class="stat-label">Memoria Utilizada</div>
+                        <div class="visual-bar">
+                            <div class="visual-fill" id="usedWF" style="width: 0%">0%</div>
+                        </div>
+                        <div class="stat-label">Memoria Libre</div>
+                        <div class="visual-bar">
+                            <div class="visual-fill" id="freeWF" style="width: 100%; background: #28a745;">100%</div>
+                        </div>
+                        <p style="margin-top: 15px; font-size: 0.95em; color: #6c757d;">
+                            <strong>Ventaja:</strong> Deja fragmentos más grandes que pueden ser útiles para procesos futuros.
+                        </p>
+                    </div>
+                    <p>Jesús Uc - Mario de la Fuente - Roberto Balmes - Venus Semino</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script></script>
+</body>
+</html>

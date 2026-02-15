@@ -66,3 +66,36 @@ Este proyecto es una herramienta educativa que permite visualizar y comparar có
    - **"Liberar Todo":** Desasigna todos los procesos pero mantiene los bloques de memoria
    - **"Reiniciar Memoria":** Elimina todo y vuelve a la configuración inicial
 
+### ¿Qué significan los resultados?
+
+- **Fragmentación baja:** El algoritmo está utilizando la memoria eficientemente
+- **Fragmentación alta:** Hay muchos espacios pequeños inutilizables
+- **Procesos asignados:** Indica qué algoritmo pudo asignar más procesos con la memoria disponible
+
+## 📊 Métricas Disponibles
+
+- **Fragmentación:** Porcentaje de memoria fragmentada en cada algoritmo
+- **Procesos Asignados:** Cantidad de procesos que lograron asignarse
+- **Memoria Utilizada:** Porcentaje de memoria en uso
+- **Memoria Libre:** Porcentaje de memoria disponible
+
+## 🎓 Explicación de los Algoritmos
+
+### ¿Cómo funciona Best Fit?
+
+1. El algoritmo recorre todos los bloques libres de memoria
+2. Busca el bloque más pequeño que pueda contener el proceso
+3. Asigna el proceso a ese bloque
+4. **Objetivo:** Minimizar el espacio desperdiciado en cada asignación
+
+**Ejemplo:** Si un proceso necesita 50 KB y hay bloques de 60 KB, 100 KB y 200 KB libres, Best Fit elegirá el bloque de 60 KB.
+
+### ¿Cómo funciona Worst Fit?
+
+1. El algoritmo recorre todos los bloques libres de memoria
+2. Busca el bloque más grande disponible
+3. Asigna el proceso a ese bloque
+4. **Objetivo:** Dejar fragmentos más grandes que puedan ser útiles después
+
+**Ejemplo:** Si un proceso necesita 50 KB y hay bloques de 60 KB, 100 KB y 200 KB libres, Worst Fit elegirá el bloque de 200 KB.
+

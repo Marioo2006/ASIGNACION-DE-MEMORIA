@@ -127,3 +127,14 @@ Las computadoras reales usan métodos más avanzados que combinan lo mejor de es
  └ 📜 README.md        # Documentación
 ```
 
+## 📚 Referencias
+
+- Silberschatz, A., Galvin, P. B., & Gagne, G. (2018). *Operating System Concepts* (10th ed.). Wiley.
+- Tanenbaum, A. S., & Bos, H. (2014). *Modern Operating Systems* (4th ed.). Pearson.
+- Stallings, W. (2018). *Operating Systems: Internals and Design Principles* (9th ed.). Pearson.
+
+## 🤖 Cláusula de Uso de IA
+
+Nosotros, Jesús Omar Uc Domínguez - Mario Alberto De la Fuente - Roberto Balmes Solís - Venus Getsemani Semino Alemán, declaramos que NO hemos utilizado herramientas de Inteligencia Artificial para la elaboración de este trabajo académico. Afirmamos que contamos con evidencias físicas y/o digitales que demuestran nuestra autoría, incluyendo pero no limitándose a: documentos manuscritos, materiales impresos con anotaciones o subrayado, historial de versiones de documentos electrónicos, o commits en repositorios de código.
+
+Reconocemos y aceptamos que el profesor se reserva el derecho de solicitar dichas evidencias en cualquier momento, especialmente cuando existan sospechas o se detecten conductas que atenten contra la integridad académica, tales como plagio o uso no reportado de herramientas de IA.

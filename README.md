@@ -99,3 +99,15 @@ Este proyecto es una herramienta educativa que permite visualizar y comparar có
 
 **Ejemplo:** Si un proceso necesita 50 KB y hay bloques de 60 KB, 100 KB y 200 KB libres, Worst Fit elegirá el bloque de 200 KB.
 
+## 💭 Reflexión
+
+La forma en que un sistema operativo administra la memoria es muy importante para que la computadora funcione bien. En este simulador podemos ver cómo dos algoritmos diferentes, Best Fit y Worst Fit, resuelven el mismo problema pero de maneras distintas.
+
+Best Fit siempre busca el espacio más pequeño donde quepa un proceso. Esto suena como una buena idea porque no desperdicia mucho espacio. Funciona muy bien cuando todos los procesos son de tamaños parecidos. Pero tiene un problema: después de un tiempo, la memoria se llena de pedacitos muy pequeños que ya no sirven para nada. Es como cuando guardas cosas en cajas y te quedan muchos espacios chiquitos donde ya no cabe nada útil.
+
+Worst Fit hace lo contrario: siempre elige el espacio más grande que encuentra. Al principio parece una mala idea, pero tiene su ventaja. Al usar los espacios grandes, lo que sobra sigue siendo un pedazo grande que después puede servir para otros procesos. Esto funciona bien cuando tienes procesos de muchos tamaños diferentes. El problema es que puede desperdiciar mucho espacio si no tienes mucha memoria disponible.
+
+Entonces, ¿cuál es mejor? La verdad es que ninguno es perfecto para todas las situaciones. Depende de cómo uses tu computadora: qué programas corres, cuánta memoria tienes, y con qué frecuencia abres y cierras programas. 
+
+Las computadoras reales usan métodos más avanzados que combinan lo mejor de estos algoritmos y otros más. También tienen trucos para reorganizar la memoria y aprovecharla mejor. Este simulador nos ayuda a entender cómo funciona la base de todo eso, para después poder comprender sistemas más complicados.
+
